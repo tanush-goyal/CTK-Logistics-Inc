@@ -1,0 +1,356 @@
+/* ====== Global Styles ====== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #1b1f3b;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  background-color: #0b1a34 !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #ffffff !important;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffffcc !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* ====== Carousel / Hero Section ====== */
+#heroCarousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 85vh; /* consistent height for all slides */
+  object-fit: cover; /* ensures uniform cropping */
+  object-position: center;
+  display: block;
+  filter: brightness(0.95);
+  transition: transform 1.2s ease, filter 0.6s ease;
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  transition: opacity 1s ease-in-out, transform 1.2s ease-in-out;
+}
+
+.carousel-item.active .hero-img {
+  transform: scale(1.03);
+  filter: brightness(1);
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.55); /* dark translucent grey */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Caption */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+  padding: 0 1rem;
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 1.2rem;
+  filter: invert(1);
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+/* Carousel indicators / dots */
+.carousel-indicators [data-bs-target] {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #27496d;
+  transform: scale(1.2);
+}
+
+/* Optional hover polish */
+.hero-img:hover {
+  filter: brightness(0.85);
+  transform: scale(1.02);
+}
+
+/* ====== Buttons ====== */
+.btn-primary {
+  background-color: #142850;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #27496d;
+  transform: translateY(-2px);
+}
+
+/* ====== Section Titles ====== */
+.section-title {
+  font-weight: 700;
+  color: #0b1a34;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #27496d;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ====== Info Cards ====== */
+.info-card {
+  border-radius: 16px;
+  background-color: #f8f9fb;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== Footer ====== */
+.footer {
+  background-color: #0b1a34;
+  color: #ffffffcc;
+  font-size: 0.95rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* ====== Animations ====== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ====== Global Styles ====== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #1b1f3b;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  background-color: #0b1a34 !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #ffffff !important;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffffcc !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* ====== Page Header ====== */
+.page-header {
+  height: 60vh;
+  background: linear-gradient(rgba(10, 20, 40, 0.7), rgba(10, 20, 40, 0.7)),
+              url("images/about-bg.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header .other-header {
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* ====== Section Titles ====== */
+.section-title {
+  font-weight: 700;
+  color: #0b1a34;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #27496d;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ====== Content Section ====== */
+section.container {
+  max-width: 1100px;
+}
+
+section p {
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+/* ====== Image Placeholder / Future Image ====== */
+.image-placeholder {
+  background: linear-gradient(135deg, #e8ecf3, #f5f7fa);
+  height: 320px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  background-image: url("images/truck2.jpeg"); /* example image, replace if needed */
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-placeholder:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== Buttons ====== */
+.btn-primary {
+  background-color: #142850;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #27496d;
+  transform: translateY(-2px);
+}
+
+/* ====== Footer ====== */
+.footer {
+  background-color: #0b1a34;
+  color: #ffffffcc;
+  font-size: 0.95rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* ====== Animations ====== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== Responsive Adjustments ====== */
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .image-placeholder {
+    height: 240px;
+  }
+}
