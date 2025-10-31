@@ -209,7 +209,7 @@ body {
 
 /* ====== Navbar ====== */
 .navbar {
-  background-color: #0b1a34 !important;
+  background-color: #1d3764 !important;
 }
 
 .navbar-brand {
@@ -353,4 +353,168 @@ section p {
   .image-placeholder {
     height: 240px;
   }
+}
+.navbar-brand .logo-img {
+  height: 100px;           /* Adjust for perfect fit */
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-brand .brand-text {
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand:hover .brand-text {
+  color: #d6d9cc;         /* Optional hover color for brand name */
+}
+
+.navbar {
+  background-color: #111; /* Dark background for readability */
+}
+
+@media (max-width: 768px) {
+  .navbar-brand .logo-img {
+    height: 38px;         /* Slightly smaller on mobile */
+  }
+  .navbar-brand .brand-text {
+    font-size: 1.1rem;
+  }
+}
+/* ================================
+   CONTACT CTA SECTION STYLING
+   ================================ */
+  .call {
+    text-decoration: none;
+    color: #111;
+  }
+   .contact-cta {
+    background: linear-gradient(135deg, #001a33, #003366); /* Subtle navy gradient */
+    color: #ffffff;
+    text-align: center;
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contact-cta h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-cta p {
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+  }
+  
+  .contact-btn {
+    background-color: #ffffff;
+    color: #001f3f;
+    border: 2px solid #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 2.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+  }
+  
+  .contact-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.25);
+  }
+  
+  /* Optional glow animation for the background */
+  .contact-cta::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%);
+    transform: rotate(25deg);
+    animation: glowMove 8s linear infinite;
+    z-index: 0;
+  }
+  
+  @keyframes glowMove {
+    0% { transform: translate(-20%, -20%) rotate(25deg); }
+    50% { transform: translate(20%, 20%) rotate(25deg); }
+    100% { transform: translate(-20%, -20%) rotate(25deg); }
+  }
+  
+  .contact-cta .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* ================================
+     FADE-IN ANIMATION
+     ================================ */
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+.thankyou {
+  margin-top: 2rcap;
+} 
+.nav-item {
+  font-size: 2rcap;
+}
+/* Navbar link styling */
+.navbar-nav .nav-item {
+  position: relative;
+  margin: 0 15px; /* spacing between items */
+}
+
+.navbar-nav .nav-link {
+  color: white; /* main nav color */
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect: line from center */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00aaff; /* bright blue accent for CTK theme */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%; /* line expands to full width */
+}
+
+/* Optional hover text color change */
+.navbar-nav .nav-link:hover {
+  color: #00aaff;
+}
+
+/* Active nav-item: line stays visible */
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+  background-color: #00aaff; /* same accent blue */
 }
