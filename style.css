@@ -166,7 +166,7 @@ body {
 /* ====== Info Cards ====== */
 .info-card {
   border-radius: 16px;
-  background-color: #f8f9fb;
+  background-color: #e0d1b4;
   transition: all 0.3s ease;
 }
 
@@ -238,6 +238,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rcap;
 }
 
 .page-header .other-header {
@@ -717,7 +718,7 @@ body.transition-blur {
               opacity 0.8s cubic-bezier(0.4,0,0.2,1);
   filter: blur(0px);
   opacity: 1;
-  background-color: rgba(229,148,51,0.05); /* subtle orange tint */
+  background-color: rgba(255, 140, 0, 0.05); /* subtle orange tint */
   transform: scale(1);
 }
 
@@ -737,4 +738,7 @@ body.transition-blur.fade-out {
   transition: filter 0.4s cubic-bezier(0.4,0,0.2,1), 
               opacity 0.4s cubic-bezier(0.4,0,0.2,1), 
               transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.lead {
+  color: white;
 }
