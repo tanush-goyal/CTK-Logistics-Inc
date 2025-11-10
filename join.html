@@ -28,8 +28,8 @@
   <!-- Page header -->
   <section class="page-header text-center text-light d-flex align-items-center justify-content-center">
     <div class="container fade-in">
-      <h1>Contact Us</h1>
-      <p class="lead">Get in touch with our logistics experts today.</p>
+      <h1>Join Us</h1>
+      <p class="lead">Join Our Team Today</p>
     </div>
   </section>
 
@@ -40,14 +40,10 @@
         <div class="col-md-8 text-center">
           <h2>Get in Touch</h2>
           <p class="mb-4">
-            Fill out the form below or call us
+            Fill out the form below
           </p>
 
           <!-- Call and Email Buttons -->
-          <div class="mb-4 call">
-            <a href="tel:+14083555388">Call us at +1 (408) 355-5388</a>
-          </div>
-
           <!-- Contact Form -->
           <form
             id="contactForm"
@@ -89,37 +85,27 @@
             </div>
 
             <div class="mb-3 info-card" style="background-color: #fefaf4;">
-              <label for="location" class="form-label">Job Location</label>
-              <input
-                type="text"
-                class="form-control"
-                id="location"
-                name="location"
-                
-              />
-            </div>
-
-            <div class="mb-3 info-card" style="background-color: #fefaf4;">
-              <label for="type" class="form-label">Job Type</label>
-              <input
-                type="text"
-                class="form-control"
-                id="type"
-                name="type"
-                
-              />
-            </div>
-
-            <div class="mb-3 info-card" style="background-color: #fefaf4;">
-              <label for="message" class="form-label">Additional Information/Message</label>
+              <label for="message" class="form-label">Qualifications*</label>
               <textarea
                 class="form-control"
                 id="message"
                 name="message"
                 rows="5"
-                
+                required
               ></textarea>
+
             </div>
+
+            <div class="mb-3 info-card" style="background-color: #fefaf4;">
+                <label for="number" class="form-label">Resumé</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="file"
+                  name="file"
+                  required
+                />
+              </div>
 
             <!-- Hidden FormSubmit fields -->
             <input type="hidden" name="_captcha" value="false" />

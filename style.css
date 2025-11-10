@@ -2,7 +2,7 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
-  color: #1b1f3b;
+  color: #3b291b;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
 
 /* ====== Navbar ====== */
 .navbar {
-  background-color: #0b1a34 !important;
+  background-color: #37260d !important;
 }
 
 .navbar-brand {
@@ -121,7 +121,7 @@ body {
 }
 
 .carousel-indicators .active {
-  background-color: #27496d;
+  background-color: #6d5427;
   transform: scale(1.2);
 }
 
@@ -132,23 +132,23 @@ body {
 }
 
 /* ====== Buttons ====== */
-.btn-primary {
-  background-color: #142850;
+.btn-warning {
+  background-color: #ffac30;
   border: none;
   border-radius: 50px;
   padding: 0.75rem 2rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-primary:hover {
-  background-color: #27496d;
+.btn-warning:hover {
+  background-color: #6d5427;
   transform: translateY(-2px);
 }
 
 /* ====== Section Titles ====== */
 .section-title {
   font-weight: 700;
-  color: #0b1a34;
+  color: #37260d;
   position: relative;
   display: inline-block;
 }
@@ -158,7 +158,7 @@ body {
   display: block;
   width: 60px;
   height: 3px;
-  background-color: #27496d;
+  background-color: #6d5427;
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -177,7 +177,7 @@ body {
 
 /* ====== Footer ====== */
 .footer {
-  background-color: #0b1a34;
+  background-color: #37260d;
   color: #ffffffcc;
   font-size: 0.95rem;
 }
@@ -187,21 +187,23 @@ body {
 }
 
 /* ====== Animations ====== */
+/* Smooth pop-in animation */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(.21,.8,.41,1);
 }
 
 .fade-in.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
+
 /* ====== Global Styles ====== */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
-  color: #1b1f3b;
+  color: #3b291b;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -209,28 +211,28 @@ body {
 
 /* ====== Navbar ====== */
 .navbar {
-  background-color: #1d3764 !important;
+  background-color: #ffffff !important;
 }
 
 .navbar-brand {
   font-weight: 700;
-  color: #ffffff !important;
+  color: #000000 !important;
   letter-spacing: 0.5px;
 }
 
 .navbar-nav .nav-link {
-  color: #ffffffcc !important;
+  color: #000000cc !important;
   transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 /* ====== Page Header ====== */
 .page-header {
   height: 60vh;
-  background: linear-gradient(rgba(10, 20, 40, 0.7), rgba(10, 20, 40, 0.7)),
+  background: linear-gradient(rgba(40, 29, 10, 0.7), rgba(40, 28, 10, 0.7)),
               url("images/about-bg.jpg") center/cover no-repeat;
   position: relative;
   display: flex;
@@ -260,7 +262,7 @@ body {
 /* ====== Section Titles ====== */
 .section-title {
   font-weight: 700;
-  color: #0b1a34;
+  color: #37260d;
   position: relative;
   display: inline-block;
 }
@@ -270,7 +272,7 @@ body {
   display: block;
   width: 60px;
   height: 3px;
-  background-color: #27496d;
+  background-color: #6d5427;
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -304,22 +306,22 @@ section p {
 }
 
 /* ====== Buttons ====== */
-.btn-primary {
-  background-color: #142850;
+.btn-warning {
+  background-color: #9b6d26;
   border: none;
   border-radius: 50px;
   padding: 0.75rem 2rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-primary:hover {
-  background-color: #27496d;
+.btn-warning:hover {
+  background-color: #6d5427;
   transform: translateY(-2px);
 }
 
 /* ====== Footer ====== */
 .footer {
-  background-color: #0b1a34;
+  background-color: #37260d;
   color: #ffffffcc;
   font-size: 0.95rem;
 }
@@ -362,12 +364,12 @@ section p {
 
 .navbar-brand .brand-text {
   font-size: 2rem;
-  color: #fff;
+  color: #000000;
   letter-spacing: 0.5px;
 }
 
 .navbar-brand:hover .brand-text {
-  color: #d6d9cc;         /* Optional hover color for brand name */
+  color: #000000;         /* Optional hover color for brand name */
 }
 
 .navbar {
@@ -390,12 +392,13 @@ section p {
     color: #111;
   }
    .contact-cta {
-    background: linear-gradient(135deg, #001a33, #003366); /* Subtle navy gradient */
+    background: linear-gradient(135deg, #332b00, #664600); /* Subtle navy gradient */
     color: #ffffff;
     text-align: center;
     padding: 5rem 1rem;
     position: relative;
     overflow: hidden;
+
   }
   
   .contact-cta h2 {
@@ -483,7 +486,7 @@ section p {
 }
 
 .navbar-nav .nav-link {
-  color: white; /* main nav color */
+  color: rgb(0, 0, 0); /* main nav color */
   text-decoration: none;
   font-weight: 500;
   position: relative;
@@ -499,7 +502,7 @@ section p {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #00aaff; /* bright blue accent for CTK theme */
+  background-color: #dfa238; /* bright blue accent for CTK theme */
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -510,11 +513,228 @@ section p {
 
 /* Optional hover text color change */
 .navbar-nav .nav-link:hover {
-  color: #00aaff;
+  color: #dfa238;
 }
 
 /* Active nav-item: line stays visible */
 .navbar-nav .nav-link.active::after {
   width: 100%;
-  background-color: #00aaff; /* same accent blue */
+  background-color: #dfa238; /* same accent blue */
+}
+/* Pixelated intro effect */
+.carousel-item .hero-img {
+  filter: brightness(0.95) blur(0px);
+}
+
+.carousel-item.active .hero-img {
+  animation: pixelReveal 1.2s ease forwards;
+}
+
+@keyframes pixelReveal {
+  0% {
+    image-rendering: pixelated;
+    filter: blur(4px) brightness(0.7);
+    transform: scale(1.05);
+  }
+  40% {
+    image-rendering: pixelated;
+    filter: blur(2px) brightness(0.85);
+    transform: scale(1.03);
+  }
+  100% {
+    image-rendering: auto;
+    filter: blur(0) brightness(1);
+    transform: scale(1.00);
+  }
+}
+.hero-img {
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+.info-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-8px) rotateX(3deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.section-title::after {
+  width: 0;
+  animation: titleBar 0.9s ease forwards;
+}
+
+@keyframes titleBar {
+  0% { width: 0; }
+  50% { width: 40px; }
+  100% { width: 60px; }
+}
+.carousel-caption h1,
+.carousel-caption p {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: captionFade 1s ease forwards;
+}
+
+.carousel-caption h1 {
+  animation-delay: 0.4s;
+}
+
+.carousel-caption p {
+  animation-delay: 0.7s;
+}
+
+@keyframes captionFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.service-image {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 5%;
+}
+/* ===== Scroll Animation for Cards ===== */
+.info-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-out;
+}
+
+.info-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Pixelated → Clear Image Reveal ===== */
+.service-image {
+  width: 100%;
+  display: block;
+  opacity: 0;
+  filter: blur(10px);
+  image-rendering: pixelated;
+  transform: scale(1.05);
+  transition:
+    opacity 0.6s ease-out,
+    filter 0.8s ease-out,
+    image-rendering 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.service-image.visible {
+  opacity: 1;
+  filter: blur(0);
+  image-rendering: auto;
+  transform: scale(1);
+}
+/* ===== Left / Right Alternating Animations ===== */
+
+/* Base hidden state */
+.info-card {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+/* Left-entry (even cards) */
+.info-card.left {
+  transform: translateX(-40px);
+}
+
+/* Right-entry (odd cards) */
+.info-card.right {
+  transform: translateX(40px);
+}
+
+/* When visible */
+.info-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: url('images/waffle.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+
+/* ===== NAVBAR DROPDOWN — GLASSMORPHISM ===== */
+
+.navbar .dropdown-menu {
+  background: rgba(80, 61, 24, 0.45);         /* translucent navy */
+  backdrop-filter: blur(12px);                /* frosted blur */
+  -webkit-backdrop-filter: blur(12px);        /* Safari support */
+  border: 1px solid rgba(255, 145, 0, 0.12);
+  border-radius: 14px;
+  padding: 0.5rem 0;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35);
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.28s ease-out;
+}
+
+.navbar .dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown items */
+.navbar .dropdown-item {
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  transition: background 0.25s ease, padding-left 0.25s ease;
+  border-radius: 8px;
+}
+
+/* Hover effect — glowing glass highlight */
+.navbar .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  padding-left: 1.35rem;
+}
+
+/* Active/focused */
+.navbar .dropdown-item:active {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+/* Dropdown arrow color (Bootstrap fix) */
+.navbar-dark .navbar-nav .nav-link.dropdown-toggle::after {
+  filter: brightness(0) invert(1);
+}
+/* ===== CTK Logistics Smooth Blur Fade Page Transition ===== */
+body.transition-blur {
+  transition: filter 0.8s cubic-bezier(0.4,0,0.2,1), 
+              opacity 0.8s cubic-bezier(0.4,0,0.2,1);
+  filter: blur(0px);
+  opacity: 1;
+  background-color: rgba(229,148,51,0.05); /* subtle orange tint */
+  transform: scale(1);
+}
+
+/* Page load: fade-in from blurred + tinted */
+body.transition-blur.fade-in {
+  filter: blur(8px);
+  opacity: 0;
+  background-color: rgba(229,148,51,0.05);
+}
+
+/* Page navigation: fade-out quickly + slight scale up */
+body.transition-blur.fade-out {
+  filter: blur(10px);
+  opacity: 0;
+  transform: scale(1.02);
+  background-color: rgba(229,148,51,0.15); /* stronger orange tint */
+  transition: filter 0.4s cubic-bezier(0.4,0,0.2,1), 
+              opacity 0.4s cubic-bezier(0.4,0,0.2,1), 
+              transform 0.4s cubic-bezier(0.4,0,0.2,1);
 }
