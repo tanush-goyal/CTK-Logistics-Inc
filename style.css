@@ -166,7 +166,7 @@ body {
 /* ====== Info Cards ====== */
 .info-card {
   border-radius: 16px;
-  background-color: #e0d1b4;
+  background-color: #f0e1c4;
   transition: all 0.3s ease;
 }
 
@@ -308,7 +308,7 @@ section p {
 
 /* ====== Buttons ====== */
 .btn-warning {
-  background-color: #9b6d26;
+  background-color: #dcac64;
   border: none;
   border-radius: 50px;
   padding: 0.75rem 2rem;
@@ -316,7 +316,7 @@ section p {
 }
 
 .btn-warning:hover {
-  background-color: #6d5427;
+  background-color: #b78f44;
   transform: translateY(-2px);
 }
 
@@ -425,6 +425,7 @@ section p {
     border-radius: 50px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+    margin: 1rcap;
   }
   
   .contact-btn:hover {
@@ -742,3 +743,63 @@ body.transition-blur.fade-out {
 .lead {
   color: white;
 }
+
+/* ===== JOIN PARALLAX SECTION ===== */
+.join {
+  background-image: url("images/team/rumit.jpeg");
+  min-height: 500px;
+
+  /* Parallax */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin-left: 0px;
+  margin-right: 0px;
+
+  /* Positioning for overlay */
+  position: relative;
+  z-index: 1;
+
+  /* Center all content */
+  display: flex;
+  flex-direction: column; /* stack text and buttons vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Fade in animation */
+  animation: joinFadeIn 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+/* Dark overlay */
+.join::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+/* Fade in keyframes */
+@keyframes joinFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Space between buttons */
+.join button {
+  margin: 10px; /* Adjust spacing as needed */
+}
+
