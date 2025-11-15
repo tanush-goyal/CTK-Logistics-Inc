@@ -7,27 +7,92 @@ body {
   margin: 0;
   padding: 0;
 }
-
 /* ====== Navbar ====== */
 .navbar {
-  background-color: #37260d !important;
+  background-color: #ffffff !important;
 }
 
 .navbar-brand {
   font-weight: 700;
-  color: #ffffff !important;
+  color: #000000 !important;
   letter-spacing: 0.5px;
 }
 
 .navbar-nav .nav-link {
-  color: #ffffffcc !important;
+  color: #000000cc !important;
   transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
+.navbar-brand .logo-img {
+  height: 100px;           /* Adjust for perfect fit */
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-brand .brand-text {
+  font-size: 2rem;
+  color: #000000;
+  letter-spacing: 0.5px;
+}
+
+.nav-item {
+  font-size: 2rcap;
+}
+/* Navbar link styling */
+.navbar-nav .nav-item {
+  position: relative;
+  margin: 0 15px; /* spacing between items */
+}
+
+.navbar-nav .nav-link {
+  color: rgb(0, 0, 0); /* main nav color */
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect: line from center */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #dfa238; /* bright orange accent for CTK theme */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%; /* line expands to full width */
+}
+
+/* Optional hover text color change */
+.navbar-nav .nav-link:hover {
+  color: #dfa238;
+}
+
+/* Active nav-item: line stays visible */
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+  background-color: #dfa238; /* same accent blue */
+}
+
+@media (max-width: 768px) {
+  .navbar-brand .logo-img {
+    height: 38px;         /* Slightly smaller on mobile */
+  }
+  .navbar-brand .brand-text {
+    font-size: 1.1rem;
+  }
+}
 /* ====== Carousel / Hero Section ====== */
 #heroCarousel {
   position: relative;
@@ -166,7 +231,7 @@ body {
 /* ====== Info Cards ====== */
 .info-card {
   border-radius: 16px;
-  background-color: #f0e1c4;
+  background-color: #f2ebdd;
   transition: all 0.3s ease;
 }
 
@@ -177,7 +242,7 @@ body {
 
 /* ====== Footer ====== */
 .footer {
-  background-color: #37260d;
+  background-color: #b24d29;
   color: #ffffffcc;
   font-size: 0.95rem;
 }
@@ -199,40 +264,12 @@ body {
   transform: translateY(0) scale(1);
 }
 
-/* ====== Global Styles ====== */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
-  color: #3b291b;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
 
-/* ====== Navbar ====== */
-.navbar {
-  background-color: #ffffff !important;
-}
-
-.navbar-brand {
-  font-weight: 700;
-  color: #000000 !important;
-  letter-spacing: 0.5px;
-}
-
-.navbar-nav .nav-link {
-  color: #000000cc !important;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #000000 !important;
-}
 
 /* ====== Page Header ====== */
 .page-header {
   height: 60vh;
-  background: linear-gradient(rgba(40, 29, 10, 0.7), rgba(40, 28, 10, 0.7)),
+  background: linear-gradient(#f26b32, #dc5c25d9),
               url("images/about-bg.jpg") center/cover no-repeat;
   position: relative;
   display: flex;
@@ -322,7 +359,7 @@ section p {
 
 /* ====== Footer ====== */
 .footer {
-  background-color: #37260d;
+  background-color: #b24d29;
   color: #ffffffcc;
   font-size: 0.95rem;
 }
@@ -357,34 +394,9 @@ section p {
     height: 240px;
   }
 }
-.navbar-brand .logo-img {
-  height: 100px;           /* Adjust for perfect fit */
-  width: auto;
-  object-fit: contain;
-}
 
-.navbar-brand .brand-text {
-  font-size: 2rem;
-  color: #000000;
-  letter-spacing: 0.5px;
-}
 
-.navbar-brand:hover .brand-text {
-  color: #000000;         /* Optional hover color for brand name */
-}
 
-.navbar {
-  background-color: #111; /* Dark background for readability */
-}
-
-@media (max-width: 768px) {
-  .navbar-brand .logo-img {
-    height: 38px;         /* Slightly smaller on mobile */
-  }
-  .navbar-brand .brand-text {
-    font-size: 1.1rem;
-  }
-}
 /* ================================
    CONTACT CTA SECTION STYLING
    ================================ */
@@ -393,7 +405,7 @@ section p {
     color: #111;
   }
    .contact-cta {
-    background: linear-gradient(135deg, #332b00, #664600); /* Subtle navy gradient */
+    background: linear-gradient(135deg, #f26b32, #9e3a0f); /* Subtle navy gradient */
     color: #ffffff;
     text-align: center;
     padding: 5rem 1rem;
@@ -478,51 +490,7 @@ section p {
 .thankyou {
   margin-top: 2rcap;
 } 
-.nav-item {
-  font-size: 2rcap;
-}
-/* Navbar link styling */
-.navbar-nav .nav-item {
-  position: relative;
-  margin: 0 15px; /* spacing between items */
-}
 
-.navbar-nav .nav-link {
-  color: rgb(0, 0, 0); /* main nav color */
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  padding: 5px 0;
-  transition: color 0.3s ease;
-}
-
-/* Hover effect: line from center */
-.navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: #dfa238; /* bright blue accent for CTK theme */
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-.navbar-nav .nav-link:hover::after {
-  width: 100%; /* line expands to full width */
-}
-
-/* Optional hover text color change */
-.navbar-nav .nav-link:hover {
-  color: #dfa238;
-}
-
-/* Active nav-item: line stays visible */
-.navbar-nav .nav-link.active::after {
-  width: 100%;
-  background-color: #dfa238; /* same accent blue */
-}
 /* Pixelated intro effect */
 .carousel-item .hero-img {
   filter: brightness(0.95) blur(0px);
@@ -803,3 +771,67 @@ body.transition-blur.fade-out {
   margin: 10px; /* Adjust spacing as needed */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Active accordion button */
+.accordion-button:not(.collapsed) {
+  color: #ffffff;           /* Text color on active */
+  background-color: #f26b32; /* Orange background */
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+/* Collapsed button hover effect */
+.accordion-button.collapsed:hover {
+  background-color: #ffe0b3; /* Light orange hover */
+}
+
+/* Smooth transition for buttons */
+.accordion-button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: slightly larger text for better readability */
+.accordion-button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.2rem 1.5rem;
+}
+
+/* Optional: add subtle border to accordion body */
+.accordion-body {
+  border-top: 1px solid #ff7f00;
+  padding: 1.5rem 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #3b291b;
+  text-decoration: none;
+}
+.accordion-body a {
+  text-decoration: none;
+  color: #f26b32;
+}
+.accordion-body a:hover {
+  text-decoration: none;
+  color: #8a4224;
+}
