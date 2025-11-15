@@ -1,1 +1,40 @@
-hello training
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Quiz</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+  <h1>Video Lesson Quiz</h1>
+
+  <video id="lessonVideo" controls>
+    <source src="your-video.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+
+  <button id="startQuizBtn" class="hidden">Start Quiz</button>
+
+  <div id="quizBox" class="hidden">
+    <h2>Quiz Question</h2>
+    <p>What color was the car in the video?</p>
+
+    <div class="options">
+      <button class="option" data-answer="red">Red</button>
+      <button class="option" data-answer="blue">Blue</button>
+      <button class="option" data-answer="green">Green</button>
+    </div>
+
+    <p id="result"></p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

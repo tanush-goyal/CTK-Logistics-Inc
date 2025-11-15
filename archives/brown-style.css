@@ -1,0 +1,806 @@
+/* ====== Global Styles ====== */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #3b291b;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ====== Navbar ====== */
+  .navbar {
+    background-color: #37260d !important;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    color: #ffffff !important;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #ffffffcc !important;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+  }
+  
+  /* ====== Carousel / Hero Section ====== */
+  #heroCarousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-img {
+    width: 100%;
+    height: 85vh; /* consistent height for all slides */
+    object-fit: cover; /* ensures uniform cropping */
+    object-position: center;
+    display: block;
+    filter: brightness(0.95);
+    transition: transform 1.2s ease, filter 0.6s ease;
+  }
+  
+  .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out, transform 1.2s ease-in-out;
+  }
+  
+  .carousel-item.active .hero-img {
+    transform: scale(1.03);
+    filter: brightness(1);
+  }
+  
+  /* Overlay */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.55); /* dark translucent grey */
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Caption */
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+    padding: 0 1rem;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Carousel controls */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    padding: 1.2rem;
+    filter: invert(1);
+    transition: all 0.3s ease;
+  }
+  
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+  }
+  
+  /* Carousel indicators / dots */
+  .carousel-indicators [data-bs-target] {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #6d5427;
+    transform: scale(1.2);
+  }
+  
+  /* Optional hover polish */
+  .hero-img:hover {
+    filter: brightness(0.85);
+    transform: scale(1.02);
+  }
+  
+  /* ====== Buttons ====== */
+  .btn-warning {
+    background-color: #ffac30;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-warning:hover {
+    background-color: #6d5427;
+    transform: translateY(-2px);
+  }
+  
+  /* ====== Section Titles ====== */
+  .section-title {
+    font-weight: 700;
+    color: #37260d;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #6d5427;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* ====== Info Cards ====== */
+  .info-card {
+    border-radius: 16px;
+    background-color: #f0e1c4;
+    transition: all 0.3s ease;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ====== Footer ====== */
+  .footer {
+    background-color: #37260d;
+    color: #ffffffcc;
+    font-size: 0.95rem;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* ====== Animations ====== */
+  /* Smooth pop-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: opacity 0.9s ease, transform 0.9s cubic-bezier(.21,.8,.41,1);
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  /* ====== Global Styles ====== */
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #3b291b;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ====== Navbar ====== */
+  .navbar {
+    background-color: #ffffff !important;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    color: #000000 !important;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #000000cc !important;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #000000 !important;
+  }
+  
+  /* ====== Page Header ====== */
+  .page-header {
+    height: 60vh;
+    background: linear-gradient(rgba(40, 29, 10, 0.7), rgba(40, 28, 10, 0.7)),
+                url("images/about-bg.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rcap;
+  }
+  
+  .page-header .other-header {
+    z-index: 2;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .page-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+  
+  /* ====== Section Titles ====== */
+  .section-title {
+    font-weight: 700;
+    color: #37260d;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #6d5427;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* ====== Content Section ====== */
+  section.container {
+    max-width: 1100px;
+  }
+  
+  section p {
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.05rem;
+  }
+  
+  /* ====== Image Placeholder / Future Image ====== */
+  .image-placeholder {
+    background: linear-gradient(135deg, #e8ecf3, #f5f7fa);
+    height: 320px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    background-image: url("images/truck2.jpeg"); /* example image, replace if needed */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-placeholder:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ====== Buttons ====== */
+  .btn-warning {
+    background-color: #dcac64;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-warning:hover {
+    background-color: #b78f44;
+    transform: translateY(-2px);
+  }
+  
+  /* ====== Footer ====== */
+  .footer {
+    background-color: #37260d;
+    color: #ffffffcc;
+    font-size: 0.95rem;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* ====== Animations ====== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* ====== Responsive Adjustments ====== */
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2.3rem;
+    }
+  
+    .page-header p {
+      font-size: 1rem;
+    }
+  
+    .image-placeholder {
+      height: 240px;
+    }
+  }
+  .navbar-brand .logo-img {
+    height: 100px;           /* Adjust for perfect fit */
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .navbar-brand .brand-text {
+    font-size: 2rem;
+    color: #000000;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar-brand:hover .brand-text {
+    color: #000000;         /* Optional hover color for brand name */
+  }
+  
+  .navbar {
+    background-color: #111; /* Dark background for readability */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-brand .logo-img {
+      height: 38px;         /* Slightly smaller on mobile */
+    }
+    .navbar-brand .brand-text {
+      font-size: 1.1rem;
+    }
+  }
+  /* ================================
+     CONTACT CTA SECTION STYLING
+     ================================ */
+    .call {
+      text-decoration: none;
+      color: #111;
+    }
+     .contact-cta {
+      background: linear-gradient(135deg, #332b00, #664600); /* Subtle navy gradient */
+      color: #ffffff;
+      text-align: center;
+      padding: 5rem 1rem;
+      position: relative;
+      overflow: hidden;
+  
+    }
+    
+    .contact-cta h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-cta p {
+      font-size: 1.15rem;
+      color: #e0e0e0;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    
+    .contact-btn {
+      background-color: #ffffff;
+      color: #001f3f;
+      border: 2px solid #ffffff;
+      font-weight: 600;
+      padding: 0.75rem 2.5rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+      margin: 1rcap;
+    }
+    
+    .contact-btn:hover {
+      background-color: transparent;
+      color: #ffffff;
+      border-color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(255, 255, 255, 0.25);
+    }
+    
+    /* Optional glow animation for the background */
+    .contact-cta::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%);
+      transform: rotate(25deg);
+      animation: glowMove 8s linear infinite;
+      z-index: 0;
+    }
+    
+    @keyframes glowMove {
+      0% { transform: translate(-20%, -20%) rotate(25deg); }
+      50% { transform: translate(20%, 20%) rotate(25deg); }
+      100% { transform: translate(-20%, -20%) rotate(25deg); }
+    }
+    
+    .contact-cta .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* ================================
+       FADE-IN ANIMATION
+       ================================ */
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  .thankyou {
+    margin-top: 2rcap;
+  } 
+  .nav-item {
+    font-size: 2rcap;
+  }
+  /* Navbar link styling */
+  .navbar-nav .nav-item {
+    position: relative;
+    margin: 0 15px; /* spacing between items */
+  }
+  
+  .navbar-nav .nav-link {
+    color: rgb(0, 0, 0); /* main nav color */
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect: line from center */
+  .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #dfa238; /* bright blue accent for CTK theme */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    width: 100%; /* line expands to full width */
+  }
+  
+  /* Optional hover text color change */
+  .navbar-nav .nav-link:hover {
+    color: #dfa238;
+  }
+  
+  /* Active nav-item: line stays visible */
+  .navbar-nav .nav-link.active::after {
+    width: 100%;
+    background-color: #dfa238; /* same accent blue */
+  }
+  /* Pixelated intro effect */
+  .carousel-item .hero-img {
+    filter: brightness(0.95) blur(0px);
+  }
+  
+  .carousel-item.active .hero-img {
+    animation: pixelReveal 1.2s ease forwards;
+  }
+  
+  @keyframes pixelReveal {
+    0% {
+      image-rendering: pixelated;
+      filter: blur(4px) brightness(0.7);
+      transform: scale(1.05);
+    }
+    40% {
+      image-rendering: pixelated;
+      filter: blur(2px) brightness(0.85);
+      transform: scale(1.03);
+    }
+    100% {
+      image-rendering: auto;
+      filter: blur(0) brightness(1);
+      transform: scale(1.00);
+    }
+  }
+  .hero-img {
+    transition: transform 0.6s ease;
+    will-change: transform;
+  }
+  .info-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-8px) rotateX(3deg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  .section-title::after {
+    width: 0;
+    animation: titleBar 0.9s ease forwards;
+  }
+  
+  @keyframes titleBar {
+    0% { width: 0; }
+    50% { width: 40px; }
+    100% { width: 60px; }
+  }
+  .carousel-caption h1,
+  .carousel-caption p {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: captionFade 1s ease forwards;
+  }
+  
+  .carousel-caption h1 {
+    animation-delay: 0.4s;
+  }
+  
+  .carousel-caption p {
+    animation-delay: 0.7s;
+  }
+  
+  @keyframes captionFade {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .service-image {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 5%;
+  }
+  /* ===== Scroll Animation for Cards ===== */
+  .info-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s ease-out;
+  }
+  
+  .info-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* ===== Pixelated → Clear Image Reveal ===== */
+  .service-image {
+    width: 100%;
+    display: block;
+    opacity: 0;
+    filter: blur(10px);
+    image-rendering: pixelated;
+    transform: scale(1.05);
+    transition:
+      opacity 0.6s ease-out,
+      filter 0.8s ease-out,
+      image-rendering 0.8s ease-out,
+      transform 0.8s ease-out;
+  }
+  
+  .service-image.visible {
+    opacity: 1;
+    filter: blur(0);
+    image-rendering: auto;
+    transform: scale(1);
+  }
+  /* ===== Left / Right Alternating Animations ===== */
+  
+  /* Base hidden state */
+  .info-card {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+  }
+  
+  /* Left-entry (even cards) */
+  .info-card.left {
+    transform: translateX(-40px);
+  }
+  
+  /* Right-entry (odd cards) */
+  .info-card.right {
+    transform: translateX(40px);
+  }
+  
+  /* When visible */
+  .info-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url('images/waffle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  
+  /* ===== NAVBAR DROPDOWN — GLASSMORPHISM ===== */
+  
+  .navbar .dropdown-menu {
+    background: rgba(80, 61, 24, 0.45);         /* translucent navy */
+    backdrop-filter: blur(12px);                /* frosted blur */
+    -webkit-backdrop-filter: blur(12px);        /* Safari support */
+    border: 1px solid rgba(255, 145, 0, 0.12);
+    border-radius: 14px;
+    padding: 0.5rem 0;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35);
+  
+    /* animation */
+    opacity: 0;
+    transform: translateY(12px);
+    transition: all 0.28s ease-out;
+  }
+  
+  .navbar .dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Dropdown items */
+  .navbar .dropdown-item {
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    transition: background 0.25s ease, padding-left 0.25s ease;
+    border-radius: 8px;
+  }
+  
+  /* Hover effect — glowing glass highlight */
+  .navbar .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    padding-left: 1.35rem;
+  }
+  
+  /* Active/focused */
+  .navbar .dropdown-item:active {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+  }
+  
+  /* Dropdown arrow color (Bootstrap fix) */
+  .navbar-dark .navbar-nav .nav-link.dropdown-toggle::after {
+    filter: brightness(0) invert(1);
+  }
+  /* ===== CTK Logistics Smooth Blur Fade Page Transition ===== */
+  body.transition-blur {
+    transition: filter 0.8s cubic-bezier(0.4,0,0.2,1), 
+                opacity 0.8s cubic-bezier(0.4,0,0.2,1);
+    filter: blur(0px);
+    opacity: 1;
+    background-color: rgba(255, 140, 0, 0.05); /* subtle orange tint */
+    transform: scale(1);
+  }
+  
+  /* Page load: fade-in from blurred + tinted */
+  body.transition-blur.fade-in {
+    filter: blur(8px);
+    opacity: 0;
+    background-color: rgba(229,148,51,0.05);
+  }
+  
+  /* Page navigation: fade-out quickly + slight scale up */
+  body.transition-blur.fade-out {
+    filter: blur(10px);
+    opacity: 0;
+    transform: scale(1.02);
+    background-color: rgba(229,148,51,0.15); /* stronger orange tint */
+    transition: filter 0.4s cubic-bezier(0.4,0,0.2,1), 
+                opacity 0.4s cubic-bezier(0.4,0,0.2,1), 
+                transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .lead {
+    color: white;
+  }
+  
+  /* ===== JOIN PARALLAX SECTION ===== */
+  .join {
+    background-image: url("images/team/rumit.jpeg");
+    min-height: 500px;
+  
+    /* Parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    margin-left: 0px;
+    margin-right: 0px;
+  
+    /* Positioning for overlay */
+    position: relative;
+    z-index: 1;
+  
+    /* Center all content */
+    display: flex;
+    flex-direction: column; /* stack text and buttons vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    /* Fade in animation */
+    animation: joinFadeIn 1.2s ease-out forwards;
+    opacity: 0;
+  }
+  
+  /* Dark overlay */
+  .join::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+  }
+  
+  /* Fade in keyframes */
+  @keyframes joinFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Space between buttons */
+  .join button {
+    margin: 10px; /* Adjust spacing as needed */
+  }
+  
+  
